@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="late.css">
+    <link rel="stylesheet" href="style.css">
     <title>week</title>
     <script src="late.js"></script>
 </head>
 
 <body>
-    <input type="submit" value="تغییر رنگ پس زمینه" onclick="color()" id="tero">
+    <div class="meta">
+
+
+</div>
+
+    <input type="submit" value="تغییر رنگ پس زمینه" onclick="switchTheme(document.body)" id="tero">
         <h2>
             Resume  
         </h2>
@@ -20,7 +25,7 @@
                 <button  type="button" id="tree">ورود به فرم رزومه</button>
             </a>
     
-            <a type="" href="index.html">
+            <a type="" href="resume.html">
                 <button type="button" id="teta">نمونه رزومه پر شده</button>
             </a>
         </div>

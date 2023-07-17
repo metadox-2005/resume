@@ -1,61 +1,68 @@
+
+
+
+
+
+
+
 <html>
     <head>
-        <link href="./style.css" rel="stylesheet">
+        <link href="" rel="stylesheet">
         <script src="por.js"></script>
     </head>
     
     <body class="">  
+        print_r($_POST);
         <table>
         <caption> فرم اطلاعات</caption>
     </table>
-    <input type="submit" value="نمای تیره" onclick="color()" id="color">
         <table>
 
             <h1>مشخصات فردی</h1>
            
             <tr>
                 <td>نام:</td>
-                <td>محمد مهدی صالحی</td>
+                <td><?= $_POST['fullname'] ?></td>
             </tr>
             
             <tr>
                 <td> شماره تلفن همراه:</td>
-                <td> +9187098280</td>
+                <td><?= $_POST['number']?></td>
             </tr>
             <tr>
                 <td>تاریخ تولد:</td>
-                <td>11 september 2005</td>
+                <td><?= $_POST['brithday'] ?></td>
             </tr>
             <tr>
                 <td>رنگ مورد علاقه:</td>
-                <td>زرد</td>
+                <td><?= $_POST['color'] ?></td>
             </tr>
             <tr>
                 <td>مقطع تحصیلی:</td>
-                <td>دیپلم</td>
+                <td><? $_POST['grade']?></td>
             </tr>
         </table>
         <h1>اطلاعات کاری</h1>
         <table class="TWO">
             <tr>
                 <td> مدت تجربه های کاری:</td>
-                <td>3 سال</td>
+                <td><? $_POST['workip']?></td>
         </tr>
         <tr>
             <td>کار های تجربه شده:</td>
-            <td>گل فروشی ٫ سفال کاری ٫ سقف کاذب </td>
+            <td><? $_POST['work'] ?></td>
         </tr>
         <tr>
             <td>شغل فعلی:</td>
-            <td>دانشجو</td>
+            <td><? $_POSTP['jop']?></td>
         </tr>
         <tr>
             <td>در کنار تحصیل به چه کاری میپردازین:</td>
-            <td>کار اموزی برنامه نویسی</td>
+            <td><? $_POST['worker']?></td>
         </tr>
         <tr>
             <td>محل کارآموزی:</td>
-            <td>همدان ٫ آرامگاه بوعلی ٫ جنب بانک کشاورزی ٫ کوچه نفیسی ٫ جنب اصناف ٫ مجموعه بام استر</td>
+            <td><? $_POST['address']?></td>
         </tr>
 
         </table>
