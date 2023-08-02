@@ -7,4 +7,4 @@ html یک قسمتی از ساختار
 
 ### قسمت خروجی یا نمایسی از کد های ما (output code)
 
-! [My project demo](img2.png)
+! [click to show image](img2.png)
