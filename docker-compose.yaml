@@ -2,6 +2,6 @@ services:
   web:
     image: ghcr.io/code-with-mehdi/php:8.2-apache
     ports:
-    - 8080:80
+    - 6969:80
     volumes:
     - .:/var/www/html:Z

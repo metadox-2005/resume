@@ -23,6 +23,7 @@ div#container  div#innerContainer{
 }
 
 h2{
+    border-radius: 13px 13px 13px 13px;
     font-size: 50pt;
     text-align: center;
     padding: 100px;
