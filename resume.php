@@ -4,7 +4,6 @@
 
 
 <?php
-if(isset($_POST )
 ?>
 
 <html>

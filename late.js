@@ -3,3 +3,4 @@ function color (){
     el.classList.toggle("colormode")
     
     }   
+   
