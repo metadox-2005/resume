@@ -1,53 +1,98 @@
-table{
-    width:100%; 
-    border-collapse: separate;
-    border-spacing: 4px;
-    text-align: right;
+@font-face {
+  font-family: Vazir;
+  src: url(/fonts/Vazir-Black.woff2);
 }
 
-   table,th,td{
-    border: 2px solid black;
-   }
-   caption {background-color: rgb(177, 177, 179);
-    border-top: 2px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 20px 20px 20px 20px;
-    font-size: 40px;
-    text-align: center;
-   }
+* {
+  font-family: 'Vazir';
+}
 
-   th{
-    font-size: 25px;
-    text-align: center;
-    border-radius: 10px 10px 10px 10px;
-   }
-   td{
-    font-size: 20px;
-   }
-   #color {
-    background-color: black;
-    border-radius: 15px 15px 15px 15px;
-    color: white;
-    float: right;
-   }
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px;
+  text-align: right;
+}
 
-   .colormode { 
-    background-color: rgb(55, 49, 49);
-    color: white;
-    
-   }
-   
-   form{
-    width: 40%;
-    margin: 0 auto;
-   }
+body {
+  direction: rtl;
+  width: 100%;
+}
 
-input{
-padding: 0.2rem;
+table {
+  border: 2px solid black;
+  direction: rtl;
+  
+}
+
+caption {
+  background-color: rgb(177, 177, 179);
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 40px;
+  text-align: center;
+}
+
+th {
+  font-size: 25px;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#color {
+  background-color: black;
+  border-radius: 15px 15px 15px 15px;
+  color: white;
+  float: right;
+}
+
+.colormode {
+  background-color: rgb(55, 49, 49);
+  color: white;
+
+}
+
+form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+label {
+  direction: rtl;
+}
+
+td{
+ width: 40%;
+ display: inline-block; 
+}
+
+tr{
+  width: 100%;
+}
+
+input {
+  float: left;
+  padding: 0.2rem;
   margin: 0.4rem 0;
+  width: 15rem;
 }
-label{
-    width: 100%;
+
+@media (max-width :400px){
+  width: 25%;
+  form{
+    background: red;
+  }
+}
+
+
+select{
+  float: left;
+}
+
+td.military-td{
+  width: 15%;
 }

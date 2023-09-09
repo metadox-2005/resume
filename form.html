@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,131 +13,158 @@
 
 <body>
     <form action="resume.php" method="post">
-   <table><caption>فرم رزومه کاری</caption></table>
-   <h1></h1>
-    <table >
+        <table>
+            <caption>فرم رزومه کاری</caption>
+        </table>
+        <h1></h1>
+        <table>
             <th>مشخصات فردی</th>
-        <tr>
-            <td>
-                <input type="text" id="fullname" name="fullname">
-                <label for="fullname">: نام</label>
-            </td>   
-        </tr>
-        <tr> 
-            <td>
-             <input type="text" id="phone number" name="number">
-             <label for="phone number">: شماره تلفن همراه</label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="date" id="brithday" name="brithday">
-                <label for="brithday">: تاریخ تولد</label>
-            </td>
-           
-        </tr>
-        <tr>
-            <td>
-                <input type="text" id="solid" name="jop">
-                <label for="solid">: شغل</label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="email" id="email" name="email">
-                <label for="email"> : ایمیل کاربری </label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="text" id="grade" name="grade">
-                <label for="grade"> : مقطع تحصیلی</label>
-            </td>
-        </tr>
-        <tr>
-            <td>
+            <tr>
+                <td>
+                    <label for="fullname">نام : </label>
+                    <input type="text" id="fullname" name="fullname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="phone number">شماره تلفن همراه : </label>
+                    <input type="text" id="phone number" name="number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="brithday">تاریخ تولد : </label>
+                    <input type="date" id="brithday" name="brithday">
+                </td>
 
-                <select name="provinces" id="provinces" onchange="updateCities()">
-                    <option>یک گزینه انتخاب کنید</option>
-                    <option value="tehran">تهران</option>
-                    <option value="hamedan">همدان</option>
-                   
-                </select>
+            </tr>
+            <tr>
+                <td>
+                    <label for="solid">شغل : </label>
+                    <input type="text" id="solid" name="jop">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">ایمیل کاربری  : </label>
+                    <input type="email" id="email" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="grade">مقطع تحصیلی : </label>
+                    <input type="text" id="grade" name="grade">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="provinces">استان : </label>
 
-                
-                <label for="provinces"> : استان</label>
-            </td>
-        </tr>
-        <tr>
-            <td>
+                    <select name="provinces" id="provinces" onchange="updateCities()">
+                        <option>یک گزینه انتخاب کنید</option>
+                        <option value="tehran">تهران</option>
+                        <option value="hamedan">همدان</option>
+                        <option value="west">آذریایجان غربی</option>
+                        <option value="east">آذربایجان شرقی</option>
 
-                <select name="cities" id="cities">
-                    
-                </select>
-                
-                <label for="cities"> : شهر</label> 
-            </td>
-        </tr>
-    </table>
-    <h1></h1>
-    <table>
-    <tr>
-        <th>مشخصات کاری</th> 
-    </tr>
-        <td>
-                <input type="text" id="Work experience" name="Workip">
-                <label for="Work experience"> : سوابق کاری</label>
-        </td>
-    <tr>
-        <td>
-            <input type="number"  id="Work" name="work">
-            <label for="Work"> : مدت سوابق کاری </label>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <select name="study" id="study">
-                <option value="tajrobi">تجربی</option>
-                <option value="ensani">انسانی</option>
-                <option value="mapth">ریاضی</option>
-                <option value="maaref">معارف اسلامی</option>
-                <option value="fani">رشته های فنی و حرفه‌ای</option>
-            </select>
-            <label for="study"> : رشته تحصیلی</label>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <select name="sobject" id="sobject">
 
-            </select>
-            <label for="sobject"> : رشته دانشگاهی</label>
+                    </select>
 
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input type="text" id="address" name="address">
-            <label for="address"> : محل کار</label>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            کارت پایان خدمت : 
-            <label for="military">خدمت رفته‌ام </label>
-            <input type="radio" id="military" name="military" value="yes">
-            <label for="military">خدمت نرفته‌ام</label>
-            <input type="radio" name="military" id="military" value="no">
-            <label for="military">مشمول به تحصیل</label>
-            <input type="radio" name="military" id="military" value="study">
-            <label for="radio">معاف از خدمت</label>
-            <input type="radio" name="military" id=""
-        </td>
-    </tr>
-    </table>
-    <button type="submit">ارسال اطلاعات</button>
-    <input type="reset" name="delete">
-</form>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="cities">شهر : </label>
+
+                    <select name="cities" id="cities">
+
+                    </select>
+
+                </td>
+            </tr>
+        </table>
+        <h1></h1>
+        <table>
+            <tr>
+                <th>مشخصات کاری</th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Work experience">سوابق کاری : </label>
+                    <input type="text" id="Work experience" name="Workip">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Work">مدت سوابق کاری : </label>
+                    <input type="number" id="Work" name="work">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="skill" >مهارت ها : </label>
+                    <input type="text" id="skill" name="skill">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="study">رشته تحصیلی : </label>
+
+                    <select name="study" id="study">
+                        <option value="tajrobi">تجربی</option>
+                        <option value="ensani">انسانی</option>
+                        <option value="mapth">ریاضی</option>
+                        <option value="maaref">معارف اسلامی</option>
+                        <option value="fani">رشته های فنی و حرفه‌ای</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="sobject">رشته دانشگاهی : </label>
+                    <select name="sobject" id="sobject">
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="address">محل کار : </label>
+                    <input type="text" id="address" name="address">
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <th> کارت پایان خدمت : </th>
+            </tr>
+
+            <tr>
+                <td class="military-td">
+                    <label for="military">خدمت رفته‌ام</label>
+                    <input type="radio" name="military" id="military" value="yes">
+                </td>
+
+                <td class="military-td">
+                    <label for="military">خدمت نرفته‌ام</label>
+                    <input type="radio" name="military" id="military" value="no">
+                </td>
+
+                <td class="military-td">
+                    <label for="military">مشمول به تحصیل</label>
+                    <input type="radio" name="military" id="military" value="study">
+                </td>
+
+                <td class="military-td">
+                    <label for="radio">معاف از خدمت</label>
+                    <input type="radio" name="military" id="military" value="exempt">
+                </td>
+            </tr>
+        </table>
+        <button type="submit">ارسال اطلاعات</button>
+        <input type="reset" name="delete">
+    </form>
 </body>
 
 </html>

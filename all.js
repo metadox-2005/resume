@@ -2,90 +2,104 @@
  * مقادیر دراپ داون شهرها را با توجه به استان انتخاب شده به روز می کند
  */
 function updateCities() {
-    let provincesElement = document.getElementById('provinces')
+    const provincesElement = document.getElementById('provinces');
+    const selectedProvince = provincesElement.value;
+    const citiesElement = document.getElementById('cities');
+    citiesElement.innerHTML = ""; // پاک کردن تمام گزینه‌ها
 
-    let selectedProvince = provincesElement.value;
-
-    let cities = getCities(selectedProvince);
-    let citiesElement = document.getElementById('cities');
-    console.info(citiesElement.childNodes);
-    citiesElement.childNodes.forEach( (node, index, array) => {
-        array[index].remove();
-        // node.remove();
-    })
-
-    cities.forEach(function(value, index, array){
-        let optionElement = document.createElement('option');
+    const cities = getCities(selectedProvince);
+    cities.forEach(function(value) {
+        const optionElement = document.createElement('option');
         optionElement.value = value;
         optionElement.innerText = value;
         citiesElement.appendChild(optionElement);
     });
-
 }
 
+function getCities(province) {
+    const cityData = {
+        'hamedan': [
+            "همدان",
+            "نهاوند",
+            "ملایر",
+            "فامنین",
+            "قهاوند",
+            "لالجین"
+        ],
+        'tehran': [
+            "تهران",
+            "ورامین",
+            "تجریش"
+        ]
+        
+    };
 
-/**
- * شهرها را برای استان داده شده بر می گرداند
- * @param {String} province 
- */
-function getCities (province) {
-
-    var cities = [];
-    switch(province){
-        case 'hamedan':
-            cities.push(
-                "همدان",
-                "نهاوند",
-                "ملایر",
-                "فامنین",
-                "قهاوند",
-                "لالجین"
-            )
-            break;
-        case 'tehran':
-            cities.push(
-                "تهران",
-                "ورامین",
-                "تجریش"
-            );
-           break;
-
-    }
-
-    return cities;
+    return cityData[province] || [];
 }
-// let hamedanCiti = [
-//     "hamedan",
-//     "famenin",
-//     "nahavand",
-//     "hamedan",
-// ]
-// let tehranCiti = [
-//     "tehran",
-//     "varamin",
-//     "tajraish",
 
-// ]
-// let provinces = [
-//     "tehran",
-//     "hamedan"
+// صفحه را با شهرهای استان اولیه (همدان) بارگذاری کنید
+updateCities();
 
-// ]
-// let checkcityItem = document.querySelector('#cities')
-// let checkprovincesItem = document.querySelector('#provinces')
-// function updateCities(){
-// if(checkprovincesItem.value == "tehran"){
-// tehranCiti.forEach(element => {
-//     let newCityElement = document.createElement('option')
-//     newCityElement.innerHTML = element
-//     checkcityItem.append(newCityElement)
-// });
-// }else if(checkprovincesItem.value === "hamedan"){
-//     hamedanCiti.forEach(element => {
-//         let newCityElement = document.createElement('option')
-//         newCityElement.innerHTML = element
-//         checkcityItem.append(newCityElement)
-//     });  
-// }
-// console.log(checkprovincesItem.value)
-// }
+
+کشکسرای
+سهند
+سیس
+دوزدوزان
+تیمورلو
+صوفیان
+سردرود
+هادیشهر
+هشترود
+زرنق
+ترکمانچای
+ورزقان
+تسوج
+زنوز
+ایلخچی
+شرفخانه
+مهربان
+مبارک شهر
+تیکمه داش
+باسمنج
+سیه رود
+میانه
+خمارلو
+خواجه
+بناب مرند
+قره آغاج
+وایقان
+مراغه
+ممقان
+خامنه
+خسروشاه
+لیلان
+نظرکهریزی
+اهر
+بخشایش
+آقکند
+جوان قلعه
+کلیبر
+مرند
+اسکو
+شندآباد
+شربیان
+گوگان
+بستان آباد
+تبریز
+جلفا
+اچاچی
+هریس
+یامچی
+خاروانا
+کوزه کنان
+خداجو(خراجو)
+آذرشهر
+شبستر
+سراب
+ملکان
+بناب
+هوراند
+کلوانق
+ترک
+عجب شیر
+آبش احمد
