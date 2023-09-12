@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="form.css">
     <script src="form.js"></script>
-    <script src="./all.js"></script>
+    <!-- <script src="./all.js"></script> -->
 
     <title>Document</title>
 </head>
@@ -28,7 +28,7 @@
             <tr>
                 <td>
                     <label for="phone number">شماره تلفن همراه : </label>
-                    <input type="text" id="phone number" name="number">
+                    <input type="tel" id="phone number" name="number">
                 </td>
             </tr>
             <tr>
@@ -60,13 +60,38 @@
                 <td>
                     <label for="provinces">استان : </label>
 
-                    <select name="provinces" id="provinces" onchange="updateCities()">
+                    <select name="provinces" id="provinces" >
                         <option>یک گزینه انتخاب کنید</option>
-                        <option value="tehran">تهران</option>
-                        <option value="hamedan">همدان</option>
                         <option value="west">آذریایجان غربی</option>
                         <option value="east">آذربایجان شرقی</option>
-
+                        <option value="ardebil">اردبیل</option>
+                        <option value="esfehan">اصفهان</option>
+                        <option value="alborz">البرز</option>
+                        <option value="eilam">ایلام</option>
+                        <option value="boshehr">بوشهر</option>
+                        <option value="tehran">تهران</option>
+                        <option value="bakhtiari">چهارمحال و بختیاری</option>
+                        <option value="razavi">خراسان رضوی</option>
+                        <option value="north">خراسان شمالی</option>
+                        <option value="south">خراسان جنوبی</option>
+                        <option value="khozestan">خوزستان</option>
+                        <option value="zanjan">زنجان</option>
+                        <option value="semnan">سمنان</option>
+                        <option value="sistan">سیستان و بلوچستان</option>
+                        <option value="fars">فارس</option>
+                        <option value="ghazvin">قزوین</option>
+                        <option value="ghom">قم</option>
+                        <option value="kordestan">کردستان</option>
+                        <option value="kerman">کرمان</option>
+                        <option value="kermanshah">کرمانشاه</option>
+                        <option value="golestan">گلستان</option>
+                        <option value="gilan">گیلان</option>
+                        <option value="lorestan">لرستان<option>
+                        <option value="mazandaran">مازندران</option>
+                        <option value="markazi">مرکزی</option>
+                        <option value="hormozgan">هرمزگان</option>
+                        <option value="hamedan">همدان</option>
+                        <option value="yazd">یزد</option>
 
                     </select>
 
@@ -81,6 +106,12 @@
 
                     </select>
 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="photo">عکس پروفایل را وارد کنید  ===></label>
+                    <input type="file" id="photo" name="photo">
                 </td>
             </tr>
         </table>
@@ -117,6 +148,7 @@
                         <option value="ensani">انسانی</option>
                         <option value="mapth">ریاضی</option>
                         <option value="maaref">معارف اسلامی</option>
+                        <option value="honar">هنر</option>
                         <option value="fani">رشته های فنی و حرفه‌ای</option>
                     </select>
                 </td>
@@ -135,7 +167,20 @@
                     <input type="text" id="address" name="address">
                 </td>
             </tr>
+
             <tr>
+                <td>
+                    <label for="favorite">علاقه مندی ها : </label>
+                    <input type="text" id="favorite" name="favorite">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="programming">علاقه مندی به رشته برنامه نویسی : </label>
+                    <input type="range" id="programming" name="programming">
+                </td>
+            </tr>
             <tr>
                 <th> کارت پایان خدمت : </th>
             </tr>
@@ -165,6 +210,7 @@
         <button type="submit">ارسال اطلاعات</button>
         <input type="reset" name="delete">
     </form>
+    <script src="all.js"></script>
 </body>
 
 </html>
