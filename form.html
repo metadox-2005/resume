@@ -16,7 +16,11 @@
         <table>
             <caption>فرم رزومه کاری</caption>
         </table>
-        <h1></h1>
+        <h1>
+            <P>
+
+            </P>
+        </h1>
         <table>
             <th>مشخصات فردی</th>
             <tr>
@@ -129,13 +133,32 @@
             <tr>
                 <td>
                     <label for="Work">مدت سوابق کاری : </label>
-                    <input type="number" id="Work" name="work">
+
+                    <select>
+                        <option value="zero">0</option>
+                        <option value="one">1</option>
+                        <option value="tow">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                        <option value="six">6</option>
+                        <option value="seven">7</option>
+                        <option value="eight">8</option>
+                        <option value="nine">9</option>
+                        <option value="ten">10</option>
+                    </select>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="skill" >مهارت ها : </label>
                     <input type="text" id="skill" name="skill">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="evidence"> دوره های گذرانده شده :</label>
+                    <input type="text" name="evidence" id="evidence">
                 </td>
             </tr>
 
@@ -163,22 +186,14 @@
             </tr>
             <tr>
                 <td>
-                    <label for="address">محل کار : </label>
-                    <input type="text" id="address" name="address">
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <label for="favorite">علاقه مندی ها : </label>
-                    <input type="text" id="favorite" name="favorite">
-                </td>
-            </tr>
-
-            <tr>
-                <td>
                     <label for="programming">علاقه مندی به رشته برنامه نویسی : </label>
                     <input type="range" id="programming" name="programming">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="sport">علاقه‌مندی به رشته های ورزشی : </label>
+                    <input type="range" id="sport" name="sport">
                 </td>
             </tr>
             <tr>
@@ -207,7 +222,7 @@
                 </td>
             </tr>
         </table>
-        <button type="submit">ارسال اطلاعات</button>
+        <button type="button" onclick="bot()">ارسال اطلاعات</button>
         <input type="reset" name="delete">
     </form>
     <script src="all.js"></script>
